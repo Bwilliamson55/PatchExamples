@@ -1,0 +1,20 @@
+{
+  "name": "bwilliamson/patch-examples",
+  "version": "1.0.0",
+  "description": "Examples for Data and Schema patches",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Bwilliamson\\PatchExamples\\": ""
+    }
+  }
+}
