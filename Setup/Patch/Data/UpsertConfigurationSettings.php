@@ -2,9 +2,9 @@
 
 namespace Bwilliamson\PatchExamples\Setup\Patch\Data;
 
+use Magento\Framework\App\Config\Storage\WriterInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
-use Magento\Setup\Module\Dependency\Report\WriterInterface;
 
 class UpsertConfigurationSettings implements DataPatchInterface
 {
@@ -20,7 +20,7 @@ class UpsertConfigurationSettings implements DataPatchInterface
     const CONFIG_SCOPE_TYPE = 'default'; //can be default, stores, websites
     const CONFIG_SCOPE_ID = '0'; //this is polymorphous - can be the ID of websites/stores/storeviews
 
-    private \Magento\Framework\App\Config\Storage\WriterInterface $configWriter;
+    private WriterInterface $configWriter;
     private ModuleDataSetupInterface $moduleDataSetup;
 
     public function __construct(
