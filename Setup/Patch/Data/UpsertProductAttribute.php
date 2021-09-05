@@ -11,6 +11,7 @@ use Magento\Framework\Setup\Patch\DataPatchInterface;
 class UpsertProductAttribute implements DataPatchInterface
 {
 //    Set your desired content in the class constants.
+//    Product attribute docs here https://devdocs.magento.com/guides/v2.4/extension-dev-guide/attributes.html
     private const ATTRIBUTE_CODE = 'my_attribute_code';
     private const ENTITY_TYPE_ID = \Magento\Catalog\Model\Product::ENTITY;
     private const ATTRIBUTE_DATA = [
@@ -24,7 +25,7 @@ class UpsertProductAttribute implements DataPatchInterface
         'filterable_in_search' => false,
         'frontend_class' => '',
         'frontend' => '',
-        'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+        'global' => true,
         'group' => '',
         'input_renderer' => '',
         'input' => 'select',
@@ -55,7 +56,7 @@ class UpsertProductAttribute implements DataPatchInterface
         'used_for_promo_rules' => false,
         'used_for_sort_by' => false,
         'used_in_product_listing' => false,
-        'user_defined' => false,
+        'user_defined' => false, // set to true for users to have the ability to change values
         'visible_in_advanced_search' => false,
         'visible_on_front' => false,
         'visible' => false,
