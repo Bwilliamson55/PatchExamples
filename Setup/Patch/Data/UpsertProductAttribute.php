@@ -72,7 +72,7 @@ class UpsertProductAttribute implements DataPatchInterface
      */
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
-        EavSetupFactory          $eavSetupFactory, $_attributeData
+        EavSetupFactory          $eavSetupFactory
     ) {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->eavSetupFactory = $eavSetupFactory;
